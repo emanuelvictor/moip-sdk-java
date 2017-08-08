@@ -10,7 +10,7 @@ public class Order {
     private String ownId;
     private final List<Item> items;
     private Customer customer;
-    private final List<Receiver> receivers = new ArrayList<>();
+    private final List<Receiver> receivers = new ArrayList<Receiver>();
 
     public String getId() {
         return id;

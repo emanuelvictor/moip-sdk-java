@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Links {
 
-    private final Map<String, Object> links = new HashMap<>();
+    private final Map<String, Object> links = new HashMap<String, Object>();
 
     public Links add(final String key, final Object link) {
         links.put(key, link);

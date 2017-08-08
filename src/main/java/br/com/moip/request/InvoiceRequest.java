@@ -5,7 +5,7 @@ import java.util.List;
 
 public class InvoiceRequest {
 
-    private List<ItemRequest> items = new ArrayList<>();
+    private List<ItemRequest> items = new ArrayList<ItemRequest>(  );
     private CustomerRequest customer;
     private CheckoutPreferencesRequest checkoutPreferences;
 

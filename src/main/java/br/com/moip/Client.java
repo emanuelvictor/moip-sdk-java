@@ -18,6 +18,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.KeyManagementException;
@@ -98,8 +100,9 @@ public class Client {
                 LOGGER.debug("");
                 LOGGER.debug("{}", body);
 
-                DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
-                wr.writeBytes(body);
+                // Suporta caracteres especiais
+                final Writer wr = new OutputStreamWriter( conn.getOutputStream(), "UTF-8" );
+                wr.write( body );
                 wr.flush();
                 wr.close();
             }
@@ -138,7 +141,7 @@ public class Client {
             LOGGER.debug("<-- END HTTP ({}-byte body)", conn.getContentLength());
 
             return gson.fromJson(responseBody.toString(), type);
-        } catch (IOException | KeyManagementException | NoSuchAlgorithmException e) {
+        } catch (Exception e) {
             throw new MoipException("Error occurred connecting to Moip API: " + e.getMessage(), e);
         }
     }

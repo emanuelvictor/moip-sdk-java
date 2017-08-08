@@ -42,6 +42,6 @@ public class TransferInstrument {
     }
 
     public enum Method {
-        BANK_ACCOUNT, MOIP_ACCOUNT;
+        BANK_ACCOUNT, MOIP_ACCOUNT
     }
 }
