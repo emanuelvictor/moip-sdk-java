@@ -1,4 +1,6 @@
-package br.com.moip.resource;
+package br.com.moip.resource.account;
+
+import lombok.Data;
 
 public class Account {
 
@@ -48,7 +50,7 @@ public class Account {
         this.login = login;
     }
 
-    public class Email{
+    public static class Email{
         private boolean confirmed;
         private String address;
 

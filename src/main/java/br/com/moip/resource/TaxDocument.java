@@ -1,5 +1,8 @@
 package br.com.moip.resource;
 
+import lombok.Data;
+
+@Data
 public class TaxDocument {
 
     private Type type;
@@ -21,7 +24,7 @@ public class TaxDocument {
                 '}';
     }
 
-    private enum Type {
+    public enum Type {
         CPF, CNPJ
     }
 }

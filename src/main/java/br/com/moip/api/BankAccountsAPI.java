@@ -2,9 +2,8 @@ package br.com.moip.api;
 
 import br.com.moip.Client;
 import br.com.moip.request.BankAccountRequest;
-import br.com.moip.resource.BankAccount;
+import br.com.moip.resource.account.bank.BankAccount;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

@@ -4,7 +4,7 @@ import br.com.moip.Client;
 import br.com.moip.request.BankAccountRequest;
 import br.com.moip.request.HolderRequest;
 import br.com.moip.request.TaxDocumentRequest;
-import br.com.moip.resource.BankAccount;
+import br.com.moip.resource.account.bank.BankAccount;
 import com.rodrigosaito.mockwebserver.player.Play;
 import com.rodrigosaito.mockwebserver.player.Player;
 import org.junit.Before;

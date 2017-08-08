@@ -1,5 +1,7 @@
 package br.com.moip.resource;
 
+import br.com.moip.resource.account.bank.BankAccount;
+
 public class TransferInstrument {
 
     private Method method;

@@ -1,6 +1,9 @@
-package br.com.moip.resource;
+package br.com.moip.resource.account.bank;
 
 import java.util.Date;
+
+import br.com.moip.resource.Holder;
+import br.com.moip.resource.Links;
 
 public class BankAccount {
 
