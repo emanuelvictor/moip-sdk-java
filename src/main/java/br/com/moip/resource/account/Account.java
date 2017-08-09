@@ -1,7 +1,5 @@
 package br.com.moip.resource.account;
 
-import lombok.Data;
-
 public class Account {
 
     private String id;
@@ -50,7 +48,7 @@ public class Account {
         this.login = login;
     }
 
-    public static class Email{
+    public static class Email {
         private boolean confirmed;
         private String address;
 
@@ -72,23 +70,21 @@ public class Account {
 
         @Override
         public String toString() {
-            final StringBuilder sb = new StringBuilder("Email{");
-            sb.append("confirmed=").append(confirmed);
-            sb.append(", address='").append(address).append('\'');
-            sb.append('}');
-            return sb.toString();
+            return "Email{" +
+                    "confirmed=" + confirmed +
+                    ", address='" + address + '\'' +
+                    '}';
         }
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Account{");
-        sb.append("id='").append(id).append('\'');
-        sb.append(", transparentAccount=").append(transparentAccount);
-        sb.append(", email=").append(email);
-        sb.append(", softDescriptor='").append(softDescriptor).append('\'');
-        sb.append(", login='").append(login).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "Account{" +
+                "id='" + id + '\'' +
+                ", transparentAccount=" + transparentAccount +
+                ", email=" + email +
+                ", softDescriptor='" + softDescriptor + '\'' +
+                ", login='" + login + '\'' +
+                '}';
     }
 }

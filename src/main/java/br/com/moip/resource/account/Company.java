@@ -22,4 +22,15 @@ public class Company
 		this.taxDocument = new TaxDocument();
 		this.taxDocument.setType( TaxDocument.Type.CNPJ );
 	}
+
+	@Override
+	public String toString() {
+		return "Company{" +
+				"name='" + name + '\'' +
+				", businessName='" + businessName + '\'' +
+				", taxDocument=" + taxDocument +
+				", phone=" + phone +
+				", address=" + address +
+				'}';
+	}
 }

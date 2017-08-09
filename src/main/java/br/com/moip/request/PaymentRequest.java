@@ -1,11 +1,16 @@
 package br.com.moip.request;
 
+import br.com.moip.resource.Escrow;
+import lombok.Data;
+
+@Data
 public class PaymentRequest {
 
     private String orderId;
     private int installmentCount;
     private FundingInstrumentRequest fundingInstrument = new FundingInstrumentRequest();
     private GeolocationRequest geolocation;
+    private EscrowRequest escrow;
 
     public PaymentRequest orderId(final String orderId) {
         this.orderId = orderId;
@@ -22,26 +27,16 @@ public class PaymentRequest {
         return this;
     }
 
-    public PaymentRequest geolocation(GeolocationRequest geolocation){
+    public PaymentRequest geolocation(GeolocationRequest geolocation) {
         this.geolocation = geolocation;
         return this;
     }
 
-    public String getOrderId() {
-        return orderId;
+    public PaymentRequest escrow(EscrowRequest escrow) {
+        this.escrow = escrow;
+        return this;
     }
 
-    public int getInstallmentCount() {
-        return installmentCount;
-    }
-
-    public FundingInstrumentRequest getFundingInstrument() {
-        return fundingInstrument;
-    }
-
-    public GeolocationRequest getGeolocation() {
-        return geolocation;
-    }
 
     @Override
     public String toString() {

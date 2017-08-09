@@ -9,29 +9,39 @@ import lombok.Data;
  * Created by Emanuel Victor on 25/07/17.
  */
 @Data
-public class Person
-{
-	private String name;
-	private String lastName;
-	private TaxDocument taxDocument;
-	private String birthDate;
-	private IdentityDocument identityDocument;
-	private Phone phone;
+public class Person {
+    private String name;
+    private String lastName;
+    private TaxDocument taxDocument;
+    private String birthDate;
+    private IdentityDocument identityDocument;
+    private Phone phone;
 
-	private ShippingAddress address;
+    private ShippingAddress address;
 
-	public Person()
-	{
-	}
+    public Person() {
+    }
 
-	public Person( String name, String lastName, TaxDocument taxDocument, String birthDate, IdentityDocument identityDocument, Phone phone, ShippingAddress address )
-	{
-		this.name = name;
-		this.lastName = lastName;
-		this.taxDocument = taxDocument;
-		this.birthDate = birthDate;
-		this.identityDocument = identityDocument;
-		this.phone = phone;
-		this.address = address;
-	}
+    public Person(String name, String lastName, TaxDocument taxDocument, String birthDate, IdentityDocument identityDocument, Phone phone, ShippingAddress address) {
+        this.name = name;
+        this.lastName = lastName;
+        this.taxDocument = taxDocument;
+        this.birthDate = birthDate;
+        this.identityDocument = identityDocument;
+        this.phone = phone;
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", taxDocument=" + taxDocument +
+                ", birthDate='" + birthDate + '\'' +
+                ", identityDocument=" + identityDocument +
+                ", phone=" + phone +
+                ", address=" + address +
+                '}';
+    }
 }
