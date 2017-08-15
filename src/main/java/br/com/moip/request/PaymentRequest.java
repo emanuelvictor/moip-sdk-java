@@ -1,6 +1,5 @@
 package br.com.moip.request;
 
-import br.com.moip.resource.Escrow;
 import lombok.Data;
 
 @Data

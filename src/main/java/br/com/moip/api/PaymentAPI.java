@@ -2,6 +2,7 @@ package br.com.moip.api;
 
 import br.com.moip.Client;
 import br.com.moip.request.PaymentRequest;
+import br.com.moip.resource.Order;
 import br.com.moip.resource.Payment;
 
 public class PaymentAPI {
@@ -14,5 +15,9 @@ public class PaymentAPI {
 
     public Payment create(final PaymentRequest payment) {
         return client.post("/v2/orders/" + payment.getOrderId() + "/payments", payment, Payment.class);
+    }
+
+    public Payment get(String id) {
+        return this.client.get("/v2/payments/" + id, Payment.class);
     }
 }

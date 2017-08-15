@@ -3,7 +3,7 @@ package br.com.moip;
 import br.com.moip.authentication.Authentication;
 import br.com.moip.exception.MoipException;
 import br.com.moip.exception.UnauthorizedException;
-import br.com.moip.exception.UnexpectecException;
+import br.com.moip.exception.UnexpectedException;
 import br.com.moip.exception.ValidationException;
 import br.com.moip.resource.Errors;
 import br.com.moip.ssl.SSLSupport;
@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -22,8 +21,6 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -133,7 +130,7 @@ public class Client {
             }
 
             if (responseCode >= 500) {
-                throw new UnexpectecException();
+                throw new UnexpectedException();
             }
 
             LOGGER.debug("");
